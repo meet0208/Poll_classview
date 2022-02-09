@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <style>
+            li{
+                 padding-top:10px; 
+                 
+            }
+            body{
+                background-color : #CCF2FF;
+            }
+            #a{
+                text-align: right;
+                color : red;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+        
+            <a href="{% url 'create' %}" id='a'><p>Create Your Own Poll</p></a>
+            
+        </div>
+        
+        {%  block content %}
+
+        {% endblock %}
+        
+    </body>
+</html>

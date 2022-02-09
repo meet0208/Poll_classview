@@ -1,0 +1,28 @@
+<html>
+<head>
+    <style>
+        fieldset{
+             margin-top:50px; 
+             width : 50px;
+        }
+        body{
+            background-color : #CCF2FF;
+        }
+
+    </style>
+</head>
+    <body>
+<center>    
+    
+<form action="{% url 'save' %}" method="post">
+    {% csrf_token %}
+<fieldset>
+<legend><h2>Question</h2></legend>
+{% if message %}<p><strong>{{ message }}</strong></p>{% endif %}
+<input type='text' size='80'  name='question' required></input>
+<br><br>
+<input type="submit" value='Submit Poll'> </input>
+</center>
+</form>
+
+</body></html>
